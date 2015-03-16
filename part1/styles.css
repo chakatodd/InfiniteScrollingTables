@@ -1,0 +1,14 @@
+#scroll_area {
+    overflow: auto;
+    background-color: grey;
+    width: 500px;
+    padding: 10px
+}
+#container {
+    min-width: 1000px;
+}
+.color {
+    width: 200px;
+    height: 100px;
+    float: left;
+}

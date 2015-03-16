@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Infinite Horizontal Scrolling DIV</title>
+    <meta name="description" content="Infinite Horizontal Scroll">
+    <meta name="author" content="Todd Chapman">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <script type="text/javascript">
+      (function($) {
+        $(document).ready(function() {
+          $("#scroll_area").on('resize scroll', onVisibilityChange);
+          //Trigger a scroll event so the status text is initialzed when the page loads.
+          $("#scroll_area").trigger('scroll');
+        });
+      })(jQuery);
+    </script>
+
+  </head>
+  <body>
+
+    <div id="scroll_area">
+      <div id="container">
+        <span id="red" class="color" style="background-color: red;"></span>
+        <span id="white" class="color" style="background-color: white;"></span>
+        <span id="blue" class="color" style="background-color: blue;"></span>
+        <span id="green" class="color" style="background-color: green;"></span>
+        <span id="brown" class="color" style="background-color: brown;"></span>
+      </div>
+    </div>
+
+    <p>color count is <span id="color_count"></span></p>
+    <div>red is <span id="red_status"></span></div>
+    <div>white is <span id="white_status"></span></div>
+    <div>blue is <span id="blue_status"></span></div>
+    <div>green is <span id="green_status"></span></div>
+    <div>brown is <span id="brown_status"></span></div>
+  </body>
+
+</html>
